@@ -1,0 +1,308 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-3">
+  <div class="row justify-content-end">
+    <div class="col col-lg-2">
+      <div class="input-group">
+        <input
+          type="search"
+          class="form-control rounded"
+          placeholder="Search"
+          aria-label="Search"
+          aria-describedby="search-addon"
+        />
+        <div class="input-group-append">
+          <button type="button" class="btn btn-outline-primary">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <Br />
+  <div class="row gutters-sm">
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex flex-column align-items-center text-center">
+            <img
+              src="https://bootdey.com/img/Content/avatar/avatar7.png"
+              alt="Admin"
+              class="rounded-circle"
+              width="150"
+            />
+            <div class="mt-3">
+              <h4>Masteradmin</h4>
+              <p class="text-dark mb-1">เจ้าหน้าที่ กองพัฒนา นักศึกษา</p>
+              <p class="text-secondary mb-1">คณะ กองพัฒนานักศึกษา</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne"
+              aria-expanded="false"
+              aria-controls="flush-collapseOne"
+            >
+              ภาพรวมระบบ
+            </button>
+          </h2>
+          <div
+            id="flush-collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <br />
+            <div class="row">
+              <div class="col">
+                <div class="card border-primary ms-3" style="max-width: 18rem">
+                  <div class="card-header">จำนวนผู้ใช้งานในระบบ</div>
+                  <div class="card-body text-primary">
+                    <p class="card-text">จำนวนนักศึกษา 1233 คน</p>
+                    <p class="card-text">จำนวนบุคลากร 450 คน</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card border-success ms-3" style="max-width: 18rem">
+                  <div class="card-header">จำนวนเอกสารทั้งหมด</div>
+                  <div class="card-body text-success">
+                    <p class="card-text">จำนวนที่อนุมัติแล้ว 373 ไฟล์</p>
+                    <p class="card-text">จำนวนที่ยังไม่อนุมัติ 41 ไฟล์</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card border-danger ms-3" style="max-width: 18rem">
+                  <div class="card-header">แบ่งคณะที่ยังไม่ได้อนุญาติ</div>
+                  <div class="card-body text-danger">
+                    <p class="card-text">คณะวิศวกรรมศาสตร์ 4 ไฟล์</p>
+                    <p class="card-text">คณะบริหารธุรกิจ 7 ไฟล์</p>
+                    <p class="card-text">คณะศิลปศาสตร์ 23 ไฟล์</p>
+                    <p class="card-text">
+                      วิทยาลัยเทคโนโลยีอุตสาหกรรมและการจัดการ 7 ไฟล์
+                    </p>
+                  </div>
+                  <a
+                    class="btn btn-danger"
+                    href="../faculuty-web-management/faculuty-web-management.component.html"
+                    role="button"
+                    >ดูรายละเอียดเอกสาร</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo"
+              aria-expanded="false"
+              aria-controls="flush-collapseTwo"
+            >
+              เพิ่มผู้ดูแลระบบ
+            </button>
+          </h2>
+          <div
+            id="flush-collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              <div class="row">
+                <div class="col-sm-3">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >Email</label
+                  >
+                </div>
+                <div class="mb-3">
+                  <input [(ngModel)]="user_email"
+                    type="email"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="name@rmutsv.ac.th"
+                  />
+                  <hr />
+                  <label for="inputPassword" class="col-sm-2 col-form-label"
+                    >Password</label
+                  >
+                  <input [(ngModel)]="user_password"
+                    type="password"
+                    id="inputPassword5"
+                    class="form-control"
+                    aria-describedby="passwordHelpBlock"
+                  />
+                  <div id="passwordHelpBlock" class="form-text"></div>
+                </div>
+              </div>
+              <hr />
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Name</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <input [(ngModel)]="user_name"
+                    class="form-control"
+                    type="text"
+                    placeholder="ชื่อ"
+                    aria-label="default input example"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">LastName</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <input [(ngModel)]="user_lastname"
+                    class="form-control"
+                    type="text"
+                    placeholder="นามสกุล"
+                    aria-label="default input example"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Role</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <select selected class="form-select" required aria-label="select example" [(ngModel)]="user_role" name="user_role" >
+                    <option>ระดับ</option>
+                    <option value="A">User</option>
+                    <option value="M">Admin</option>
+                  </select>
+                </div>
+              </div>
+              <hr />
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Faculty</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <select selected class="form-select" required aria-label="select example" [(ngModel)]="fac_id" name="fac_id">
+                    <option >คณะ</option>
+                    <option value="1">คณะวิศวกรรมศาสตร์</option>
+                    <option value="2">คณะบริหารธุรกิจ</option>
+                    <option value="3">คณะศิลปศาสตร์</option>
+                    <option value="4">วิทยาลัยเทคโนโลยีอุตสาหกรรมและการจัดการ</option>
+                    <option value="5">กองพัฒนานักศึกษา</option>
+                  </select>
+                </div>
+              </div>
+
+              <hr />
+              <input class="btn btn-warning" type="submit" value="ยืนยัน" type="button" (click)="adduser()" />
+            </div>
+          </div>
+        </div>
+        <br>
+        <h5>ผู้ใช้ในระบบ</h5>
+        <br>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Email</th>
+              <th scope="col">Name</th>
+              <th scope="col">Lastname</th>
+              <th scope="col">Role</th>
+              <th scope="col">Faculty</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Del</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of userlist; let i = index">
+              <th scope="row">{{i+1}}</th>
+              <td>{{item.user_email}}</td>
+              <td>{{item.user_name}}</td>
+              <td>{{item.user_lastname}}</td>
+              <td>
+                <span *ngIf="item.user_role == 'A'">คณะ</span>
+                <span *ngIf="item.user_role == 'M'">ผู้ดูแลระบบ</span>
+
+              </td>
+              <td>{{item.fac_name}}</td>
+              <td><button type="button" (click)="editShowData(item)" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  แก้ไข
+              </button></td>
+              <td><button class="btn btn-danger" type="submit">ลบ</button></td>
+            </tr>
+
+
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">แก้ไขข้อมูล</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Email</label>
+            <input type="text" class="form-control"  name="email" [(ngModel)]="regis.user_email" [ngModelOptions]="{ standalone: true }">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Name</label>
+            <input type="text" class="form-control" name="fname" [(ngModel)]="regis.user_name" [ngModelOptions]="{ standalone: true }">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">LastName</label>
+            <input type="text" class="form-control"  [(ngModel)]="regis.user_lastname" [ngModelOptions]="{ standalone: true }">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Role</label>
+
+
+            <select selected class="form-select" required aria-label="select example" [(ngModel)]="regis.user_role" name="user_role" >
+              <option>ระดับ</option>
+              <option value="A">User</option>
+              <option value="M">Admin</option>
+            </select>
+
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Faculty</label>
+            <input type="text" class="form-control"  [(ngModel)]="regis.fac_id" [ngModelOptions]="{ standalone: true }">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>

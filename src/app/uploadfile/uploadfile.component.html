@@ -1,0 +1,64 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="main-body">
+    <br>
+    <div class="alert alert-warning" role="alert">
+      <p class="h3">อัพโหลดไฟล์</p>
+    </div>
+    <form class="was-validated" [(ngModel)]="uploadFiles"   >
+      <!-- <label for="validationTextarea" class="form-label">หลักสูตร</label> -->
+      <!-- <div class="input-group mb-3"> -->
+        <!-- <div class="input-group-prepend"> -->
+        <!-- </div> -->
+        <!-- <input type="text" id="note" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="กรอกข้อมูลหลักสูตร" [(ngModel)]="course_name" required> -->
+      <!-- </div> -->
+
+
+
+      <div class="mb-3">
+        <label for="validationTextarea" class="form-label">หลักสูตร</label>
+        <select class="form-select" required aria-label="select example" name="course_type_id"> <!--  [(ngModel)]="course_type_id" -->
+          <option value="">เลือกหลักสูตร</option>
+          <!-- <option value="1">การใช้ชีวิตแห่งโลกสมัยใหม่</option>    ต้องดึงค่าจาก Database -->
+          <!-- <option value="2">การเป็นผู้ประกอบการ</option> ต้องดึงค่าจาก Database -->
+          <!-- <option value="3">เทคโนโลยีดิจิทัล</option> ต้องดึงค่าจาก Database -->
+          <!-- <option value="4">ภาษาต่างประเทศ</option> ต้องดึงค่าจาก Database -->
+          <!-- <option value="5">การวางแผนทางการเงิน</option> ต้องดึงค่าจาก Database -->
+        </select>
+        <div class="invalid-feedback">กรุณาเลือกหลักสูตร</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="validationTextarea" class="form-label">รายละเอียดข้อมูล</label>
+        <select class="form-select" required aria-label="select example" [(ngModel)]="cap_type_id" name="cap_type_id">    <!-- ต้องเลือกสมรรถณ database-->
+          <option value="">เลือกหัวข้อ</option>
+          <option value="1">การใช้ชีวิตแห่งโลกสมัยใหม่</option>
+          <option value="2">การเป็นผู้ประกอบการ</option>
+          <option value="3">เทคโนโลยีดิจิทัล</option>
+          <option value="4">ภาษาต่างประเทศ</option>
+          <option value="5">การวางแผนทางการเงิน</option>
+        </select>
+        <div class="invalid-feedback">กรุณาเลือกหัวข้อในการอัพโหลด</div>
+      </div>
+      
+
+      <div class="mb-3">
+        <input type="file" class="form-control" aria-label="file example"  required (change)="onFileChange($event)">
+        <div class="invalid-feedback">โปรดเลือกไฟล์</div>
+      </div>
+      <div *ngIf="selectedFiles.length > 0">
+        <h6>ไฟล์ที่ต้องการอัพโหลด</h6>
+        <ul>
+          <li *ngFor="let file of selectedFiles">{{ file.name }}</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <button class="btn btn-primary" type="submit" (click)="uploadFiles()">ยืนยัน</button>
+        &nbsp;
+        <button class="btn btn-danger" type="button" (click)="clearFiles()">ลบไฟล์</button>
+      </div>
+    </form>
+  </div>
+</div>

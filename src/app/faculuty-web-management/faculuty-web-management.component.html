@@ -1,0 +1,408 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="main-body">
+    <Br />
+    <Br />
+    <div class="row gutters-sm">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex flex-column align-items-center text-center">
+              <img
+                src="https://bootdey.com/img/Content/avatar/avatar7.png"
+                alt="Admin"
+                class="rounded-circle"
+                width="150"
+              />
+              <div class="mt-3">
+                <h4>admin</h4>
+                <p class="text-dark mb-1">จำลอง การทำงาน</p>
+                <p class="text-secondary mb-1">คณะวิศวกรรมศาสตร์</p>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="list-group" id="list-tab" role="tablist">
+              <div class="alert alert-success" role="alert">
+                เลือกสาขาที่ต้องการ
+              </div>
+              <a
+                class="list-group-item list-group-item-action"
+                id="list-home-list"
+                data-bs-toggle="list"
+                href="#list-home"
+                role="tab"
+                aria-controls="list-home"
+                >สาขาวิศวกรรมไฟฟ้า<span
+                  class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"
+                >
+                  <span class="visually-hidden">New alerts</span> </span
+                >สาขาวิศวกรรมโยธา</a
+              >
+
+              <a
+                class="list-group-item list-group-item-action"
+                id="list-profile-list"
+                data-bs-toggle="list"
+                href="#list-profile"
+                role="tab"
+                aria-controls="list-profile"
+                >สาขาวิศวกรรมไฟฟ้า<span
+                  class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"
+                >
+                  <span class="visually-hidden">New alerts</span>
+                </span></a
+              >
+              <a
+                class="list-group-item list-group-item-action"
+                id="list-messages-list"
+                data-bs-toggle="list"
+                href="#list-messages"
+                role="tab"
+                aria-controls="list-messages"
+                >สาขาวิศวกรรมเครื่องกล
+                <span
+                  class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"
+                >
+                  <span class="visually-hidden">New alerts</span>
+                </span>
+              </a>
+              <a
+                class="list-group-item list-group-item-action"
+                id="list-settings-list"
+                data-bs-toggle="list"
+                href="#list-settings"
+                role="tab"
+                aria-controls="list-settings"
+                >สาขาวิศวกรรมอุตสาหการ
+                <span
+                  class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"
+                >
+                  <span class="visually-hidden">New alerts</span>
+                </span>
+              </a>
+              <a
+                class="list-group-item list-group-item-action"
+                id="list-end-list"
+                data-bs-toggle="list"
+                href="#list-end"
+                role="tab"
+                aria-controls="list-end"
+                >สาขาวิศวกรรมคอมพิวเตอร์
+                <span
+                  class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"
+                >
+                  <span class="visually-hidden">New alerts</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <form class="d-flex">
+          <input
+            class="form-control me-1"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+      </div>
+
+      <div class="card mt-3">
+        <div class="tab-content" id="nav-tabContent">
+          <div
+            class="tab-pane fade show active"
+            id="list-home"
+            role="tabpanel"
+            aria-labelledby="list-home-list"
+          >
+        
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">ID1</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Document</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of capData.data">
+                  <th scope="row">{{item.std_id}}</th>
+                  <td>{{item.std_name}} {{item.std_lastname}}</td>
+                  <td>
+                    <button type="button" class="btn btn-danger">
+                      <i
+                        class="bi bi-check-circle-fill text-light"
+                        id="#"
+                        href="#"
+                      ></i>
+                      ดูรายละเอียดเอกสาร
+                    </button>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+
+          <div
+            class="tab-pane fade"
+            id="list-profile"
+            role="tabpanel"
+            aria-labelledby="list-profile-list"
+          >
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">ID2</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Document</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">164404140001</th>
+                  <td>กิตติ เพชรนิล</td>
+                  <td>
+                    <button type="button" class="btn btn-danger">
+                      <i
+                        class="bi bi-check-circle-fill text-light"
+                        id="#"
+                        href="#"
+                      ></i>
+                      ดูรายละเอียดเอกสาร
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">164404140056</th>
+                  <td>เกียรติขจรปฏิวัติการหายนตร์ เจริญวิทยากุึล ณ อยุธยา</td>
+                  <td>
+                    <button type="button" class="btn btn-danger">
+                      <i
+                        class="bi bi-check-circle-fill text-light"
+                        id="#"
+                        href="#"
+                      ></i>
+                      ดูรายละเอียดเอกสาร
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>@twitter</td>
+                  <td>
+                    <button type="button" class="btn btn-danger">
+                      <i
+                        class="bi bi-check-circle-fill text-light"
+                        id="#"
+                        href="#"
+                      ></i>
+                      ดูรายละเอียดเอกสาร
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div
+            class="tab-pane fade"
+            id="list-messages"
+            role="tabpanel"
+            aria-labelledby="list-messages-list"
+          >
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">ID3</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Document</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">164404140001</th>
+                  <td>กิตติ เพชรนิล</td>
+                  <td>
+                    <button type="button" class="btn btn-danger">
+                      <i
+                        class="bi bi-check-circle-fill text-light"
+                        id="#"
+                        href="#"
+                      ></i>
+                      ดูรายละเอียดเอกสาร
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">164404140056</th>
+                  <td>เกียรติขจรปฏิวัติการหายนตร์ เจริญวิทยากุึล ณ อยุธยา</td>
+                  <td>
+                    <button type="button" class="btn btn-danger">
+                      <i
+                        class="bi bi-check-circle-fill text-light"
+                        id="#"
+                        href="#"
+                      ></i>
+                      ดูรายละเอียดเอกสาร
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>@twitter</td>
+                  <td>
+                    <button type="button" class="btn btn-danger">
+                      <i
+                        class="bi bi-check-circle-fill text-light"
+                        id="#"
+                        href="#"
+                      ></i>
+                      ดูรายละเอียดเอกสาร
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div
+            class="tab-pane fade"
+            id="list-settings"
+            role="tabpanel"
+            aria-labelledby="list-list-settings-list"
+          >
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">ID4</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Document</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">164404140001</th>
+                  <td>กิตติ เพชรนิล</td>
+                  <td>
+                    <button type="button" class="btn btn-danger">
+                      <i
+                        class="bi bi-check-circle-fill text-light"
+                        id="#"
+                        href="#"
+                      ></i>
+                      ดูรายละเอียดเอกสาร
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">164404140056</th>
+                  <td>เกียรติขจรปฏิวัติการหายนตร์ เจริญวิทยากุึล ณ อยุธยา</td>
+                  <td>
+                    <button type="button" class="btn btn-danger">
+                      <i
+                        class="bi bi-check-circle-fill text-light"
+                        id="#"
+                        href="#"
+                      ></i>
+                      ดูรายละเอียดเอกสาร
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>@twitter</td>
+                  <td>
+                    <button type="button" class="btn btn-danger">
+                      <i
+                        class="bi bi-check-circle-fill text-light"
+                        id="#"
+                        href="#"
+                      ></i>
+                      ดูรายละเอียดเอกสาร
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+              <div
+                class="tab-pane fade"
+                id="list-end"
+                role="tabpanel"
+                aria-labelledby="list-end-list"
+              >
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">ID5</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Document</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">164404140001</th>
+                      <td>กิตติ เพชรนิล</td>
+                      <td>
+                        <button type="button" class="btn btn-danger">
+                          <i
+                            class="bi bi-check-circle-fill text-light"
+                            id="#"
+                            href="#"
+                          ></i>
+                          ดูรายละเอียดเอกสาร
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">164404140056</th>
+                      <td>
+                        เกียรติขจรปฏิวัติการหายนตร์ เจริญวิทยากุึล ณ อยุธยา
+                      </td>
+                      <td>
+                        <button type="button" class="btn btn-danger">
+                          <i
+                            class="bi bi-check-circle-fill text-light"
+                            id="#"
+                            href="#"
+                          ></i>
+                          ดูรายละเอียดเอกสาร
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>@twitter</td>
+                      <td>
+                        <button type="button" class="btn btn-danger">
+                          <i
+                            class="bi bi-check-circle-fill text-light"
+                            id="#"
+                            href="#"
+                          ></i>
+                          ดูรายละเอียดเอกสาร
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
